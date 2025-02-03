@@ -1,7 +1,11 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int main() {
     int option;
+    int curr_size = 8;
+    int iter = 0;
+    int *array = malloc(curr_size * sizeof(int));
 
     while(1) {
         printf("1. Insert\n");
@@ -29,6 +33,10 @@ int main() {
                 break;
             case 5:
                 printf("Display operation selected.\n");
+                for (iter = 0; iter < curr_size; ++iter) {
+                    printf("%d ", array[iter]);
+                }
+                printf("\n");
                 break;
             case 6:
                 printf("Exiting program...\n");
