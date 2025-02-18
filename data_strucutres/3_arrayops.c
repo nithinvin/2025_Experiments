@@ -6,6 +6,8 @@ int main() {
     int curr_size = 8;
     int iter = 0;
     int *array = malloc(curr_size * sizeof(int));
+    int value = 0;
+    int pos = 0;
 
     while(1) {
         printf("1. Insert\n");
@@ -21,6 +23,10 @@ int main() {
         switch (option) {
             case 1:
                 printf("Insert operation selected.\n");
+                printf("Enter value to insert: ");
+                scanf("%d", &value);
+                printf("Enter position: ");
+                scanf("%d", &pos);
                 break;
             case 2:
                 printf("Delete operation selected.\n");
