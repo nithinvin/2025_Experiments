@@ -13,7 +13,11 @@ int main() {
         if (grade == -1)
             break;  
         grades.push_back(grade);
-        cout << "Vector size: " << grades.size() << endl;
-        cout << "Vector capacity: " << grades.capacity() << endl;
+        // cout << "Vector size: " << grades.size() << endl;
+        // cout << "Vector capacity: " << grades.capacity() << endl;
     }
+    for (auto it = grades.begin(); it != grades.end(); ++it){
+        cout << *it << " ";
+    }
+    cout << endl;	
 }
