@@ -30,5 +30,16 @@ int main() {
         cout << contact.first << " - " << contact.second << endl;
     }
 
+    string cname;
+    cout << "Enter the contact name to search: ";
+    cin >> cname;
+
+    for (const auto& contact : contacts) {
+        if (cname == contact.first) {
+            cout << contact.first << " - " << contact.second << endl;
+            break;
+        }
+    }
+
     return 0;
 }
