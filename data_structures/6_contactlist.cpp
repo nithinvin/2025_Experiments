@@ -34,11 +34,16 @@ int main() {
     cout << "Enter the contact name to search: ";
     cin >> cname;
 
+    bool found = false;
     for (const auto& contact : contacts) {
         if (cname == contact.first) {
             cout << contact.first << " - " << contact.second << endl;
+            found = true;
             break;
         }
+    }
+    if (!found) {
+        cout << "Contact not found!" << endl;
     }
 
     return 0;
