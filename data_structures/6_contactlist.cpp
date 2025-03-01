@@ -36,10 +36,9 @@ int main() {
 
     bool found = false;
     for (const auto& contact : contacts) {
-        if (cname == contact.first) {
+        if (contact.first.find(cname) != string::npos) {
             cout << contact.first << " - " << contact.second << endl;
             found = true;
-            break;
         }
     }
     if (!found) {
