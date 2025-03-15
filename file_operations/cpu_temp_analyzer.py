@@ -33,7 +33,7 @@ with open(file_path, newline='', encoding="ISO-8859-1") as csvfile:
             continue  # Skip empty rows
 
         try:
-            temperature = float(row[-2])  # Convert last valid column to float (MB)
+            temperature = float(row[-2])  # Can use row[3] for GPU temperature
             total_rows += 1  # Count valid data rows
 
             # Update memory usage counts
