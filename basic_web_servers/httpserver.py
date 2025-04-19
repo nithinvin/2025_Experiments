@@ -8,6 +8,6 @@ class SimpleHandler(BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(b"Hello from Nithin's Python Web Server!")
 
-server = HTTPServer(('172.22.91.41', 9090), SimpleHandler)
-print("Server started on http://172.22.91.41:9090")
+server = HTTPServer(('0.0.0.0', 9090), SimpleHandler)
+print("Server started on http://0.0.0.0:9090")
 server.serve_forever()
