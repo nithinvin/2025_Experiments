@@ -3,19 +3,24 @@ import os
 import mimetypes
 
 # Get the directory where the script is running
+print("abs path of __file__ is", os.path.abspath(__file__))
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 class StaticSiteHandler(BaseHTTPRequestHandler):
     def do_GET(self):
         # Default to index.html
+        print("initial path is ", self.path)
         path = self.path.strip("/")
+        print("path is ", path)
         if path == "":
             path = "index.html"
         
         file_path = os.path.join(BASE_DIR, path)
+        print("full file_path is", file_path)
 
         if os.path.isfile(file_path):
             mime_type, _ = mimetypes.guess_type(file_path)
+            print("mime_type is", mime_type)
             try:
                 with open(file_path, "rb") as f:
                     content = f.read()
@@ -44,4 +49,3 @@ def run(server_class=HTTPServer, handler_class=StaticSiteHandler, port=8080):
 
 if __name__ == "__main__":
     run()
-
