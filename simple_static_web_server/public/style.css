@@ -23,6 +23,30 @@ nav a:hover {
   text-decoration: underline;
 }
 
+.container {
+  display: flex;
+  justify-content: center; /* horizontal center */
+  align-items: center;     /* vertical center */
+  height: 100vh;            /* full viewport height */
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* space between games */
+}
+
+.game img {
+  border-radius: 10px; /* rounded corners */
+}
+
+.game p {
+  text-align: center;
+  margin-top: 8px;
+  font-size: 1.2rem;
+}
+
 /* 🌐 Mobile-friendly styles */
 @media (max-width: 600px) {
   body {
