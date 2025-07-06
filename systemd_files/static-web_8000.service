@@ -1,0 +1,14 @@
+[Unit]
+Description=Simple Python Static Web Server
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/static-web-server.sh
+Restart=always
+User=www-data
+WorkingDirectory=/var/www/my-web/server_8000
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
